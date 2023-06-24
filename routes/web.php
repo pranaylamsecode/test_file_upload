@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileUpload;
+use App\Http\Controllers\ChunkFileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +20,5 @@ Route::get('/', function () {
 Route::get('/upload-file', [FileUpload::class, 'createForm']);
 Route::post('/upload-file', [FileUpload::class, 'fileUpload'])->name('fileUpload');
 
+Route::get('file-upload',[ChunkFileController::class,'create']) ;
+Route::post('chunk',[ChunkFileController::class,'chunkStore'])->name('chunk.store');
