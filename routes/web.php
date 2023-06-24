@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/upload-file', [FileUpload::class, 'createForm']);
 Route::post('/upload-file', [FileUpload::class, 'fileUpload'])->name('fileUpload');
+

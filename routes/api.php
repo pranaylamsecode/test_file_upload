@@ -18,3 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/upload-file', [FileUpload::class, 'fileUpload'])->name('fileUpload');
+Route::get('/upload-file-test', [FileUpload::class, 'test']);
